@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Quotes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="quote-card">
+            <div class="quote-icon">"”</div>
+            <blockquote class="quote-text">
+                {{ quote.quote }}
+            </blockquote>
+            <div class="quote-source">
+                <span class="movie-title">{{ quote.movie }}</span>
+                <span class="movie-year">({{ quote.year }})</span>
+            </div>
+        </div>
+        <a href="/" class="refresh-btn">New Quote</a>
+    </div>
+    <footer>
+        <p>Movie Quotes</p>
+    </footer>
+</body>
+</html>
